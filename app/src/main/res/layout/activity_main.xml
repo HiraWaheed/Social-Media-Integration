@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:outlineProvider="bounds"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="329dp"
+        android:layout_height="66dp"
+        android:layout_marginTop="36dp"
+        android:gravity="center"
+        android:text="Login via "
+        android:textColor="#AB5ED5"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="380dp"
+        android:layout_height="82dp"
+        android:layout_marginTop="32dp"
+        android:orientation="horizontal"
+        android:outlineAmbientShadowColor="#AB5ED5"
+        android:outlineProvider="paddedBounds"
+        android:outlineSpotShadowColor="#AB5ED5"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.531"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="274dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:onClick="googleSignInfunc"
+            android:text="Login with Google"
+            android:textColor="#AB5ED5"
+            android:textSize="34sp" />
+
+        <ImageButton
+            android:id="@+id/imgbtngoogle"
+            style="@android:style/Widget.Holo.Light.ImageButton"
+            android:layout_width="82dp"
+            android:layout_height="match_parent"
+            android:foregroundGravity="center_vertical"
+            android:onClick="googleSignInfunc"
+            android:visibility="visible"
+            app:srcCompat="@drawable/google"
+            tools:ignore="SpeakableTextPresentCheck" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="377dp"
+        android:layout_height="84dp"
+        android:layout_marginTop="48dp"
+        android:orientation="horizontal"
+        android:outlineAmbientShadowColor="#AB5ED5"
+        android:outlineProvider="bounds"
+        android:outlineSpotShadowColor="#AB5ED5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="277dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:onClick="facebookSignInfunc"
+            android:text="Login with Facebook"
+            android:textColor="#AB5ED5"
+            android:textSize="34sp" />
+
+        <ImageButton
+            android:id="@+id/imgbtnfacebook"
+            style="@android:style/Widget.Holo.Light.ImageButton"
+            android:layout_width="84dp"
+            android:layout_height="match_parent"
+            android:foregroundGravity="center_vertical"
+            android:onClick="facebookSignInfunc"
+            app:srcCompat="@drawable/facebook"
+            tools:ignore="SpeakableTextPresentCheck" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="409dp"
+        android:layout_height="166dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:srcCompat="@drawable/login" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
